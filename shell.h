@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/wait.h>
-#include <sy/wait.h>
+#include <sys/wait.h>
 #include <sys/types.h>
 #include <string.h>
 #include <sys/stat.h>
@@ -14,10 +14,7 @@
 #include <errno.h>
 
 #define MAX_INPUT_LEN 1024
-extern charr **environ;
-void display_prompt(void);
-void exit_function(void);
-char *strdup(const char *str);
+void execute_child_process(char *command, char *args[])
 
 
 #endif
