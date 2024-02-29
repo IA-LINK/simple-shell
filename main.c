@@ -23,21 +23,21 @@ int main(void)
 		}
 		if (user_input[read_size - 1] == '\n')
 			user_input[read_size - 1] = '\0';
-		if (strncmp(user_input, "exit", 4) == 0)/* checking if user enter exit*/
+		if (_strncmp(user_input, "exit", 4) == 0)/* checking if user enter exit*/
 		{
 			free(user_input);
 			user_input = NULL;
 			user_input_size = 0;
 			exit(EXIT_SUCCESS);
 		}
-		if (strcmp(strtrim(user_input), "env") == 0)/* handling evn */
+		if (_strcmp(_strtrim(user_input), "env") == 0)/* handling evn */
 		{
-			void print_env();
+			print_env();
 			continue;
 		}
 		if (read_size > 1)
 		{
-			output = exe_command(strtrim(user_input));
+			output = exe_command(_strtrim(user_input));
 			if (output == -1)
 				break;
 		}

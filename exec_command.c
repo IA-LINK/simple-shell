@@ -4,7 +4,7 @@
  * @command_with_args: the command with its argument
  * Return: always return 0 on sucess
  */
-char exe_command(char *command_with_args)
+int exe_command(char *command_with_args)
 {
 	pid_t child_pid;
 	int status, arg_count = 0;
