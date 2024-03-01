@@ -10,7 +10,9 @@
 char *custom_strtok(char *str, const char *delim)
 {
 	static char *last_pos;
+
 	char *start;
+
 	if (str != NULL)
 	{
 		last_pos = str;
