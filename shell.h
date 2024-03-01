@@ -29,4 +29,5 @@ int exe_command(char *command_with_args);
 void execute_child_process(char *command, char *args[]);
 void print_env(void);
 void execute_commands_from_file(const char *filename);
+char *custom_strtok(char *str, const char *delim);
 #endif /* SHELL_H */
