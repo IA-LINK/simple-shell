@@ -12,6 +12,8 @@
 #include <errno.h>
 
 #define MAX_INPUT_LEN 1024
+#define MAX_BUFFER 1024
+
 extern char **environ;
 void display_prompt(void);
 void exit_function(void);
@@ -30,4 +32,8 @@ void execute_child_process(char *command, char *args[]);
 void print_env(void);
 void execute_commands_from_file(const char *filename);
 char *custom_strtok(char *str, const char *delim);
+pid_t custom_fork(void);
+ssize_t custom_getline(char **lineptr, size_t *n, FILE *stream);
+
+
 #endif /* SHELL_H */
