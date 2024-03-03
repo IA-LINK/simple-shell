@@ -34,8 +34,6 @@ void execute_commands_from_file(const char *filename);
 char *custom_strtok(char *str, const char *delim);
 pid_t custom_fork(void);
 ssize_t custom_getline(char **lineptr, size_t *n, FILE *stream);
-int custom_atoi(const char *str);
-int custom_xstat(int version, const char *path, struct stat *buf);
 
 
 #endif /* SHELL_H */
