@@ -2,7 +2,7 @@
 /**
  * main - Entry point to the program
  * the function implements loop to wait for user
- * imput.
+ * input.
  * Return: Always return 0
  */
 int main(void)
@@ -11,6 +11,8 @@ int main(void)
 	size_t user_input_size = 0;
 	ssize_t read_size;
 	int output;
+	char size_str[20];
+        int size_length = sprintf(size_str, "%ld", fileStat.st_size);
 
 	while (1)
 	{
