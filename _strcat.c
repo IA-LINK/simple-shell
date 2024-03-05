@@ -1,23 +1,27 @@
 #include "shell.h"
 /**
- * _strcat -  this is a function that concatenate two strings
- * @dest: the char string to be concatenated
- * @src: chara string
- * Return: this return concated string
+ * _strcat - concatenates two strings
+ * @final_str: string to append to
+ * @str_to: string to add
+ *
+ * Return: a pointer to the resulting string
  */
-char *_strcat(char *dest, char *src)
+char *_strcat(char *final_str, char *str_to)
 {
-	int i = 0;
-	int j = 0;
+	int i, j;
 
-	while (dest[i] != '\0')
+	i = 0;
+	while (final_str[i] != '\0')
 		i++;
-	while (src[j] != '\0')
+
+	j = 0;
+	while (str_to[j] != '\0')
 	{
-		dest[j] = src[i];
-		i++;
+		final_str[i] = str_to[j];
 		j++;
+		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	final_str[i] = '\0';
+
+	return (final_str);
 }

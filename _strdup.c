@@ -1,44 +1,21 @@
 #include "shell.h"
+size_t _strlen(const char *str);
 /**
- * _strlen_const - calculates the length a string
- * @s: pointer to the string input
- *
- * Return: length of string
+ * _strdup - duplicating string
+ * @str: string to be duplicated
+ * Return: string
  */
-int _strlen_const(const char *s)
+char *_strdup(const char *str)
 {
-	int k = 0;
+	size_t length = _strlen(str) + 1;
+	char *new_str = (char *)malloc(length);
+	size_t i = 0;
 
-	while (s[k] != '\0')
-	{
-		k++;
-	}
-	return (1);
-}
-/**
- * _strdup - create a dup
- *
- * this function allocates memory for new string
- * @src: pointer to the source string
- * Return: point to the newly allocated
- */
-char *_strdup(const char *src)
-{
-	int length, j;
-	char *dst;
-
-	if (src == NULL)
-		return (NULL);
-	length = _strlen_const(src);
-	if (length < 0)
+	if (new_str == NULL)
 		return (NULL);
 
-	length++;
-	dst = malloc((length) * sizeof(char));
-	if (dst == NULL)
-		return (NULL);
-	for (j = 0; j < length; j++)
-		dst[j] = src[j];
-	dst[j - 1] = '\0';
-	return (dst);
+	for (; i < length; i++)
+		new_str[i] = str[i];
+
+	return (new_str);
 }

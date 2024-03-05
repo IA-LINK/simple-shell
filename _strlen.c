@@ -1,16 +1,14 @@
 #include "shell.h"
 /**
- * _strlen - function to calculate length of a string
- * @str: string to cal
- * Return: return length
+ * _strlen - length of string
+ * @str: string
+ * Return: number of characters
  */
 size_t _strlen(const char *str)
 {
-	size_t len = 0;
+	size_t i = 0;
 
-	while (str[len] != '\0')
-	{
-		len++;
-	}
-	return (len);
+	while (str[i] != '\0')
+		i++;
+	return (i);
 }
