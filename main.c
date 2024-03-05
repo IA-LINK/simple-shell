@@ -2,7 +2,7 @@
 /**
  * main - Entry point to the program
  * the function implements loop to wait for user
- * input.
+ * imput.
  * Return: Always return 0
  */
 int main(void)

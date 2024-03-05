@@ -15,24 +15,23 @@
 #define MAX_BUFFER 1024
 
 extern char **environ;
-void display_prompt(void);
-void exit_function(void);
-char *strdup(const char *str);
-char *_strcat(char *dest, char *src);
-int _strcmp(const char *str1, const char *str2);
-size_t _strlen(const char *str);
-int is_whitespace(char c);
+char *_strncpy(char *dest, char *src, int n);
+char *custom_strtok(char *str, const char *delim);
 char *_strtrim(char *c);
+char *_strcat(char *dest, char *src);
+char *_getenv(const char *name);
+char *_strdup(const char *src);
 char *get_path(char *command);
 char *_strcpy(char *dest, char *src);
 int _strncmp(const char *s1, const char *s2, size_t n);
-char *_getenv(const char *name);
+int _strcmp(const char *str1, const char *str2);
+int _strlen_const(const char *s);
 int exe_command(char *command_with_args);
-void execute_child_process(char *command, char *args[]);
-void print_env(void);
-void execute_commands_from_file(const char *filename);
-char *custom_strtok(char *str, const char *delim);
+size_t _strlen(const char *str);
+ssize_t custom_getline(char **lineptr, size_t *n, FILE *stream);
 pid_t custom_fork(void);
+void display_prompt(void);
+void execute_child_process(char *command, char *args[]);
 
 
 #endif /* SHELL_H */
