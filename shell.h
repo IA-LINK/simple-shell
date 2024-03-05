@@ -31,6 +31,7 @@ size_t _strlen(const char *str);
 ssize_t custom_getline(char **lineptr, size_t *n, FILE *stream);
 pid_t custom_fork(void);
 void display_prompt(void);
+void print_env(void);
 void execute_child_process(char *command, char *args[]);
 
 
