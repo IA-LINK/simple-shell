@@ -11,6 +11,16 @@
 
 /* global variables */
 
+typedef struct {
+	char **tokens; 
+	int argc;
+	char *cmd;
+	int status;
+	int lineno;
+	int fileno;
+	char *file;
+	int readfd;
+} info_t;
 extern char **environ;
-
+int is_cmd(info_t *info, char *path);
 #endif
